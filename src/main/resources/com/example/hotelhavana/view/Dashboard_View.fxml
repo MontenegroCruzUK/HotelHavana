@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.font.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" prefHeight="568.0" prefWidth="946.0" styleClass="rootPane" stylesheets="@../css/Main_Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelhavana.controller.Dashboard_Controller">
+   <children>
+      <HBox layoutX="839.0" prefHeight="30.0" prefWidth="107.0">
+         <children>
+            <HBox fx:id="hB_Header" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="760.0" spacing="10.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <children>
+                  <MFXFontIcon fx:id="alwaysOnTopIcon" description="mfx-circle" size="15.0" styleClass="always-on-top-icon" />
+                  <MFXFontIcon fx:id="minimizeIcon" description="mfx-circle" size="15.0" styleClass="minimize-icon">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </MFXFontIcon>
+                  <MFXFontIcon fx:id="closeIcon" description="mfx-circle" size="15.0" styleClass="close-icon" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="-2.0" prefHeight="762.0" prefWidth="258.0" styleClass="sidebar">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="60.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="185.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo_hotel.png" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="header" text=" Hotel Havana" />
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <MFXScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="658.0" prefWidth="301.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </VBox.margin>
+               <content>
+                  <VBox fx:id="navBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" styleClass="navbar" />
+               </content>
+            </MFXScrollPane>
+         </children>
+      </VBox>
+      <StackPane fx:id="contentPane" layoutX="268.0" layoutY="38.0" prefHeight="722.0" prefWidth="676.0" />
+   </children>
+</AnchorPane>
