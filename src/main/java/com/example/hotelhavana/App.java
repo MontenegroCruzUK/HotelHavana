@@ -13,7 +13,7 @@ public class App extends Application {
 	public void start (Stage stage)  {
 		
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader (App.class.getResource ("view/Dashboard_View.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader (App.class.getResource ("view/Reserva_View.fxml"));
 			stage.initStyle (StageStyle.UNDECORATED);
 			Scene scene = new Scene (fxmlLoader.load ());
 			stage.setScene (scene);
