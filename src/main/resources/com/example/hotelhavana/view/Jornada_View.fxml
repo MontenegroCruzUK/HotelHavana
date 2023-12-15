@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXSpinner?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="596.0" prefWidth="1025.0" stylesheets="@../css/Main_Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelhavana.controller.Jornada_Controller">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-6.0" prefHeight="592.0" prefWidth="1025.0" spacing="25.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="49.0" prefWidth="666.0" spacing="5.0">
+               <children>
+                  <MFXTextField fx:id="txt_Nombre" floatMode="BORDER" floatingText="Nombre" prefHeight="49.0" prefWidth="130.0" promptText="Ej. Christopher" />
+                  <MFXTextField fx:id="txt_Apellido" floatMode="BORDER" floatingText="Apellido" prefHeight="49.0" prefWidth="164.0" promptText="Ej. Marlowe" />
+                  <MFXTextField fx:id="txt_Telefono" floatMode="BORDER" floatingText="Telefono" prefHeight="49.0" prefWidth="136.0" promptText="Ej. 652142541" />
+                  <MFXDatePicker fx:id="date_FechaEvento" floatMode="BORDER" floatingText="Fecha Evento" prefHeight="38.0" prefWidth="156.0" promptText="Ej. Dec 6, 1564" />
+                  <MFXSpinner fx:id="Spinner_TipoCocina" prefHeight="41.0" prefWidth="211.0" promptText="Tipo de Cocina" />
+                  <MFXSpinner fx:id="Spinner_NumeroPersonas" prefHeight="41.0" prefWidth="128.0" promptText="Nº Personas" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="tabla_Jornada" prefHeight="501.0" prefWidth="1025.0">
+              <columns>
+                <TableColumn fx:id="colum_Nombre" prefWidth="188.0" text="Nombre" />
+                <TableColumn fx:id="colum_Apellido" prefWidth="152.0" text="Apellido" />
+                  <TableColumn fx:id="colum_Telefono" prefWidth="180.0" text="Telefono" />
+                  <TableColumn fx:id="colum_Fecha" prefWidth="214.0" text="Fecha" />
+                  <TableColumn fx:id="colum_TipoCocina" prefWidth="197.0" text="tipo Cocina" />
+                  <TableColumn fx:id="colum_NumeroPersonas" prefWidth="93.0" text="Nº Personas" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <MFXButton fx:id="btn_Guardar" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #0288D1; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" text="Guardar" />
+                  <MFXButton fx:id="btn_Actualizar" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #FFBF37; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" text="Actualizar" />
+                  <MFXButton fx:id="btn_Eliminar" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #EF6E6B; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" text="Eliminar" />
+                  <MFXButton fx:id="btn_Cancelar" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #8BC34A; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" text="Cancelar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
